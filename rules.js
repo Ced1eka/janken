@@ -65,7 +65,7 @@ function game (){
                   alert('player won');
                   playerTotal+=1;
             } else {
-                  alert("this isn't an anime");
+                  alert("That's not the right move silly.");
             }
       }
 
