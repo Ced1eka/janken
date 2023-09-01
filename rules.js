@@ -43,16 +43,12 @@ return computerChoice;
 // }
 
 function game (){
-      let e =Number(prompt("how many rounds? "));
-      for(let i = 0; i < e; i++){
       let playerTotal = 0;
       let compTotal = 0;
+      let e =Number(prompt("how many rounds? "));
+      for(let i = 0; i < e; i++){
 
-      let Player = prompt("your play!");
-      let lowerCased = Player.toLowerCase();
-      let firstUpper = lowerCased.toUpperCase()[0]; //Capitalizes first letter
-      let playerSelection = lowerCased.replace(lowerCased[0], `${firstUpper}`);
-      let computerSelection = getComputerChoice();
+
 
       function rounds(playerSelection, computerSelection) {
             // your code here!
@@ -72,16 +68,31 @@ function game (){
                   alert("this isn't an anime");
             }
       }
-     console.log(rounds(playerSelection, computerSelection));
-      // let bil = () =>{
-            // console.log(playerSelection, computerSelection);
-      // }
 
-      // bil();
+      let Player = prompt("your play!");
+      let lowerCased = Player.toLowerCase();
+      let firstUpper = lowerCased.toUpperCase()[0]; //Capitalizes first letter
+      let playerSelection = lowerCased.replace(lowerCased[0], `${firstUpper}`);
+      let computerSelection = getComputerChoice();
+
+
+      rounds(playerSelection,computerSelection); // correct snytax i guess
+            // console.log(playerSelection, computerSelection);
+            // console.log(playerTotal, compTotal);
+
+
 
 }
-
+      if(playerTotal > compTotal ){
+            alert('player wins')
+      }else if (playerTotal < compTotal){
+            alert('comp wins')
+      }else {
+            alert('its a tie')
+      }
 }
       game();
+//      console.log(playerSelection,computerSelection);
+
 //     console.log(playerSelection, computerSelection);
 //     console.log(playRound(playerSelection, computerSelection));
